@@ -1,5 +1,13 @@
 # Music-Recommendation-Model
 
+Tools Used
+1. Apache Spark
+2. Apache Kafka
+3. MongoDB
+4. Pyspark
+5. Flask
+6. Ubuntu
+
 Overview
 
 This project aims to develop a music recommendation system utilizing the Free Music Archive (FMA) dataset. The system is designed to provide personalized music recommendations to users based on their preferences and listening history.
