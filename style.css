@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.logo {
+    width: 100%;
+    height: 100%h; /* Adjust the height as desired */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    padding: 10px, 8%;
+}
+
+.image {
+    width: 100%;
+    height: 100vh; /* Adjust the height as desired */
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    filter: brightness(60%);
+}
+
+.button {
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Change display property */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px; /* Add margin between buttons */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.button:hover {
+    background-color: #005f7f;
+}
+
+.button1{
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Change display property */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 103px; /* Add margin between buttons */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.button1:hover {
+    background-color: #005f7f;
+}
+
+.button2{
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Change display property */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 195px; /* Add margin between buttons */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.button2:hover {
+    background-color: #005f7f;
+}
+
+.button3{
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Change display property */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 330px; /* Add margin between buttons */
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.button3:hover {
+    background-color: #005f7f;
+}
+
+.button4{
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(56, 84, 56);
+    display: inline-block; /* Change display property */
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 630px; /* Add margin between buttons */
+    margin-right: 1150px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.button4:hover {
+    background-color: #005f7f;
+}
+
+.ex_bc {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(56, 84, 56);
+}
+
+.rec {
+    padding: 10px;
+    margin: 20px; 
+    letter-spacing: 12px;
+}
+
+.song {
+    margin-left: 20px; 
+}
+
+.left {
+    position: fixed; /* Position the div relative to the viewport */
+    top: 110px; /* Align the div to the top */
+    right: 300px; /* Align the div to the left */
+    width: 200px; /* Set the width of the div */
+    height: 100%; /* Set the height of the div to cover the entire viewport */
+    background-color: rgb(56, 84, 56); /* Set the background color */
+    /* Add other styling properties as needed */
+    font-size: 40px
+}
+
+.print_data {
+    padding: 10px;
+    margin: 20px; 
+}
