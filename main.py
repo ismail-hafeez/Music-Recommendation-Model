@@ -7,13 +7,12 @@ from flask import render_template
 from flask_wtf.csrf import CSRFProtect
 import pandas as pd
 import os
+import csv
 
 app = Flask(__name__, static_url_path='/static')
 
 # Read the CSV file into a DataFrame
-df = pd.read_csv('/home/hdoop/Downloads/data2.csv')
-
-count = 0
+df = pd.read_csv('tracks.csv')
 
 @app.route('/')
 def home():
@@ -21,15 +20,29 @@ def home():
 
 @app.route('/explore')
 def explore_html():
-    return render_template('explore.html')
+    # Read the CSV file into a DataFrame
+    # df_rec = pd.read_csv('/home/hdoop/kafka/show_rec.csv')
+    csv_file_path = "/home/hdoop/kafka/show_rec.csv"
+
+    # List to store the values
+    values = []
+
+    # Read the CSV file and extract the values
+    with open(csv_file_path, "r") as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            # Assuming each row contains a single value
+            values.extend(row)
+
+    return render_template('explore.html', values=values)
 
 @app.route('/getStarted')
 def getStarted_html():
     return render_template('getStarted.html',table=df)
 
 
-@app.route('/history')
-def history_html():
+@app.route('/playlist')
+def playlist_html():
     try:
         df_read = pd.read_csv('audio_data.csv')
         print("Data read successfully:")
@@ -37,7 +50,7 @@ def history_html():
     except Exception as e:
         print("Error reading CSV file:", e)
         df_read = None  # Define df_read as None if an error occurs
-    return render_template('history.html', table1=df_read)
+    return render_template('playlist.html', table1=df_read)
 
 # Route to process the form
 @app.route('/process', methods=['POST'])
@@ -69,7 +82,7 @@ def process_form():
     except Exception as e:
         print("Error reading CSV file:", e)
 
-    return render_template('history.html', table1=df_read)
+    return render_template('playlist.html', table1=df_read)
 
 
 if __name__ == '__main__':

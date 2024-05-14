@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="logo">  
+        <image class = "image" src = "{{ url_for('static', filename='/images/logo7.jpeg')}}"> 
+            <a href="{{ url_for('playlist_html') }}"><span class="button">Playlist</span></a>  
+            <a href="{{ url_for('explore_html') }}"><span class="button1">Explore</span></a>
+            <a href="{{ url_for('getStarted_html') }}"><span class="button2">Get Started</span></a>
+            <a href="{{ url_for('home') }}"><span class="button3">Home</span></a>
+        </image>   
+    </div> 
+    
+
+</body>
+</html>

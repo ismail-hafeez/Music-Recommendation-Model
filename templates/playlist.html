@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Playlist</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <style>
+        /* Add space between table cells */
+        td {
+            padding-right: 22px; /* Adjust the value as needed */
+        }
+        th {
+            font-size: 30px;
+            color: rgb(243, 191, 113);
+            filter: opacity(0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="ex_bc">
+        <div class = "left_play">
+            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: blanchedalmond; filter: opacity(0.4);">Your Playlist</h1>
+        </div>
+        <a href="{{ url_for('playlist_html') }}"><span class="button">Playlist</span></a>  
+        <a href="{{ url_for('explore_html') }}"><span class="button1">Explore</span></a>
+        <a href="{{ url_for('getStarted_html') }}"><span class="button2">Get Started</span></a>
+        <a href="{{ url_for('home') }}"><span class="button3">Home</span></a>
+        <div class = "print_data">
+            <table>
+                <thead>
+                    <tr>
+                        <br></br>
+                        <th>ID</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for index, row in table1.iterrows() %}
+                    <tr>
+                        <td>{{ row['ID'] }}</td>
+                        <td>{{ row['Artist'] }}</td>
+                        <td>{{ row['Album'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

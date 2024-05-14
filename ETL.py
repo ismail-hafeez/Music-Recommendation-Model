@@ -11,7 +11,7 @@ collection = db['tracks']
 
 
 def load_files_path():
-    directory = 'fma_medium'
+    directory = 'fma_large'
 # List to store paths of all the wav files
     mp3_files = []
 # Walk through all directories and subdirectories

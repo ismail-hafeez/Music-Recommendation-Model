@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Explore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <style>
+        /* Add space between table cells */
+        td {
+            padding-right: 22px; /* Adjust the value as needed */
+        }
+        th {
+            font-size: 30px;
+            color: rgb(243, 191, 113);
+            filter: opacity(0.4);
+        }
+        tbody {
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="ex_bc">
+        <div class="rec_ex">
+            <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: blanchedalmond; filter: opacity(0.4);">Explore New Horizons</h1>
+        </div>
+        <a href="{{ url_for('playlist_html') }}"><span class="button">Playlist</span></a>  
+        <a href="{{ url_for('explore_html') }}"><span class="button1">Explore</span></a>
+        <a href="{{ url_for('getStarted_html') }}"><span class="button2">Get Started</span></a>
+        <a href="{{ url_for('home') }}"><span class="button3">Home</span></a>
+        <div class="print_data">
+            <table>
+                <thead>
+                    <tr>
+                        <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: rgb(243, 191, 113); letter-spacing: 9px; filter: opacity(0.4); padding-right: 30px; font-size: 50px;">Songs We Suggest</h2>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for value in values %}
+                    <tr>
+                        <td>{{ value }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
