@@ -26,13 +26,3 @@ The recommendation model is deployed onto a web application using Flask framewor
 Reporting
 
 A comprehensive report detailing the methodology and findings of the music recommendation system is provided. The report evaluates the effectiveness and implementation of the recommendation system, highlighting key insights and performance metrics.
-
-For more details, please refer to the documentation and codebase in the GitHub repository.
-Contributors
-
-    John Doe
-    Jane Smith
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
